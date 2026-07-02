@@ -1,1 +1,1 @@
-setuptools>=65.0
+loguru
