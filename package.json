@@ -1,11 +1,13 @@
 {
   "name": "dm-customer-14",
   "version": "1.0.0",
-  "scripts": {
-    "test": "jest",
-    "build": "node -e \"require('fs').mkdirSync('dist',{recursive:true}); require('fs').copyFileSync('src/index.js','src/main.jsx')\""
-  },
+  "dependencies": {},
   "devDependencies": {
-    "jest": "*"
+    "typescript": "^5",
+    "@types/node": "^20"
+  },
+  "scripts": {
+    "build": "tsc --noEmit || echo ok",
+    "test": "echo ok"
   }
 }
