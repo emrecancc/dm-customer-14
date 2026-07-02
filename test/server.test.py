@@ -11,10 +11,10 @@ def test_health_check():
 
 def test_api_endpoint():
     # Starts another server on same port — conflict!
-    server = threading.Thread(target=lambda: app.run(port=3099))
+    server = threading.Thread(target=lambda: app.run(port=3059))
     server.daemon = True
     server.start()
     import time; time.sleep(0.1)
     import requests
-    r = requests.get(f'http://localhost:3099/api')
+    r = requests.get(f'http://localhost:3059/api')
     assert r.status_code == 200
