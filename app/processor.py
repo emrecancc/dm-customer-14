@@ -1,16 +1,11 @@
 import re
 
-
-def parse_line(line: str):
-    """Parse a line of the form ``key=value`` and return a dictionary.
-
-    The original implementation used the walrus operator (``:=``) which
-    requires Python 3.8+.  The CI environment runs Python 3.7, so we
-    rewrite the logic to be compatible while keeping the behaviour
-    identical.
-    """
-    m = re.match(r"(\w+)=(\d+)", line)
-    if m:
-        key, value = m.group(1), int(m.group(2))
-        return {key: value}
-    return None
+def process_lines(text: str) -> list:
+    results = []
+    lines = text.splitlines()
+    for line in lines:
+        if m := re.match(r'(\w+)=(\d+)', line):
+            results.append({'key': m.group(1), 'val': int(m.group(2))})
+        elif chunk := line.strip():
+            results.append({'raw': chunk})
+    return results
