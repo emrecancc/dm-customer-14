@@ -1,22 +1,9 @@
-def format_report(title, count, data):
-    """Return a formatted report string.
-
-    Parameters
-    ----------
-    title : str
-        The title of the report.
-    count : int
-        Number of items.
-    data : dict
-        Dictionary containing optional keys ``total`` and ``precision``.
-
-    Returns
-    -------
-    str
-        A human‑readable report string.
-    """
-    precision = data.get("precision", 2)
-    total = data.get("total", 1)
-    rate = count / max(total, 1) * 100
-    report = f"Report: {title!r} | Items: {count:,} | Rate: {rate:.{precision}f}%"
+def format_report(data: dict) -> str:
+    title = data.get('title', 'Untitled')
+    count = data.get('count', 0)
+    # Complex f-string with nested quotes and expressions
+    report = f"Report: {title!r} | Items: {count:,} | Rate: {count/max(data.get('total', 1), 1)*100:.{data.get('precision', 2)}f}%"
     return report
+
+def format_list(items):
+    return f"[{', '.join(f'{i}' for i in {*items,})}]"
