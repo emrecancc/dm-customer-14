@@ -2,13 +2,9 @@
   "name": "dm-customer-14",
   "version": "1.0.0",
   "scripts": {
-    "test": "jest",
-    "build": "node -e \"require('fs').mkdirSync('dist',{recursive:true}); require('fs').copyFileSync('src/index.js','src/main.jsx')\""
+    "test": "jest"
   },
   "devDependencies": {
-    "jest": "*",
-    "3.10": "*",
-    "uvicorn": "*",
-    "requests": "*"
+    "jest": "*"
   }
 }
