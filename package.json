@@ -2,19 +2,9 @@
   "name": "dm-customer-14",
   "version": "1.0.0",
   "scripts": {
-    "test": "jest",
-    "build": "node -e \"require('fs').mkdirSync('dist',{recursive:true}); require('fs').copyFileSync('src/index.js','dist/app.js')\""
+    "test": "jest"
   },
   "devDependencies": {
-    "jest": "*",
-    "3.10": "*",
-    "scrapy": "*",
-    "python-scraper": "*",
-    "loguru": "*",
-    "python-dotenv": "*",
-    "requirements.txt": "*",
-    "pandas": "*",
-    "orjson": "*",
-    "matplotlib": "*"
+    "jest": "*"
   }
 }
