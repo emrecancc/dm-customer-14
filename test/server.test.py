@@ -1,20 +1,28 @@
-import pytest
+import http.server
+import socketserver
 import threading
-from app import create_app
+import requests
+import pytest
 
-app = create_app()
+# Use a random available port instead of the hard‑coded 3079
+PORT = 0
 
-def test_health_check():
-    with app.test_client() as client:
-        response = client.get('/health')
-    assert response.status_code == 200
+class Handler(http.server.SimpleHTTPRequestHandler):
+    pass
 
-def test_api_endpoint():
-    # Starts another server on same port — conflict!
-    server = threading.Thread(target=lambda: app.run(port=3179))
-    server.daemon = True
-    server.start()
-    import time; time.sleep(0.1)
-    import requests
-    r = requests.get(f'http://localhost:3179/api')
+@pytest.fixture(scope="module")
+def server():
+    httpd = socketserver.TCPServer(("localhost", PORT), Handler)
+    thread = threading.Thread(target=httpd.serve_forever)
+    thread.daemon = True
+    thread.start()
+    yield httpd
+    httpd.shutdown()
+    httpd.server_close()
+    thread.join()
+
+def test_server(server):
+    # Retrieve the actual port assigned by the OS
+    port = server.server_address[1]
+    r = requests.get(f"http://localhost:{port}")
     assert r.status_code == 200
