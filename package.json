@@ -11,6 +11,7 @@
     "preinstall": "*",
     "pydantic": "*",
     "aiohttp": "*",
-    "dependencies": "*"
+    "dependencies": "*",
+    "missing": "*"
   }
 }
