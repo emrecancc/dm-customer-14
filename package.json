@@ -8,6 +8,7 @@
     "jest": "*",
     "3.10": "*",
     "scrapy": "*",
-    "python-scraper": "*"
+    "python-scraper": "*",
+    "loguru": "*"
   }
 }
