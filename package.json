@@ -8,6 +8,8 @@
     "jest": "*",
     "3.10": "*",
     "opencv-python": "*",
-    "loguru": "*"
+    "loguru": "*",
+    "transformers": "*",
+    "pyyaml": "*"
   }
 }
