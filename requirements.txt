@@ -1,4 +1,2 @@
-# python-scraper requirements
-django==3.2.0
+pydantic>=0.100.0
 requests>=2.28.0
-urllib3>=1.26.0
