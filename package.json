@@ -2,16 +2,9 @@
   "name": "dm-customer-14",
   "version": "1.0.0",
   "scripts": {
-    "test": "jest",
-    "build": "node -e \"require('fs').mkdirSync('dist',{recursive:true}); require('fs').copyFileSync('src/index.js','server.js.bak')\""
+    "test": "jest"
   },
   "devDependencies": {
-    "jest": "*",
-    "3.10": "*",
-    "preinstall": "*",
-    "pydantic": "*",
-    "aiohttp": "*",
-    "dependencies": "*",
-    "missing": "*"
+    "jest": "*"
   }
 }
