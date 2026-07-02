@@ -1,1 +1,1 @@
-scrapy
+setuptools>=65.0
