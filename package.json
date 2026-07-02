@@ -1,13 +1,10 @@
 {
   "name": "dm-customer-14",
   "version": "1.0.0",
-  "dependencies": {},
-  "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20"
-  },
   "scripts": {
-    "build": "tsc --noEmit || echo ok",
-    "test": "echo ok"
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "*"
   }
 }
