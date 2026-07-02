@@ -6,7 +6,6 @@
   },
   "devDependencies": {
     "jest": "*",
-    "3.10": "*",
     "opencv-python": "*",
     "loguru": "*",
     "transformers": "*",
