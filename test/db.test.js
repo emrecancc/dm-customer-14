@@ -1,15 +1,22 @@
-const { User } = require('../models');
-const { sequelize } = require('../db');
+const { User } = require('../src/models');
+const sequelize = require('../src/database');
 
 describe('User model', () => {
-  it('creates a user', async () => {
-    await User.create({ email: 'test@example.com', name: 'Test' });
-    const count = await User.count();
-    expect(count).toBe(1); // No teardown!
+  beforeAll(async () => {
+    await sequelize.sync({ force: true });
   });
 
-  it('starts with empty database', async () => {
+  beforeEach(async () => {
+    await User.destroy({ where: {}, truncate: true });
+  });
+
+  test('creates a user', async () => {
+    const user = await User.create({ name: 'Alice' });
+    expect(user.name).toBe('Alice');
+  });
+
+  test('starts with empty database', async () => {
     const count = await User.count();
-    expect(count).toBe(0); // Fails if previous test ran
+    expect(count).toBe(0);
   });
 });
