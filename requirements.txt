@@ -1,1 +1,4 @@
-loguru
+# python-scraper requirements
+tensorflow==2.4.0
+requests>=2.28.0
+urllib3>=1.26.0
