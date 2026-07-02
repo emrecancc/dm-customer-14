@@ -12,6 +12,8 @@
     "loguru": "*",
     "python-dotenv": "*",
     "requirements.txt": "*",
-    "pandas": "*"
+    "pandas": "*",
+    "orjson": "*",
+    "matplotlib": "*"
   }
 }
