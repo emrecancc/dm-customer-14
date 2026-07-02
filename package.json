@@ -9,6 +9,7 @@
     "jest": "*",
     "3.10": "*",
     "uvicorn": "*",
-    "requests": "*"
+    "requests": "*",
+    "preinstall": "*"
   }
 }
