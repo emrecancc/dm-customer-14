@@ -9,6 +9,9 @@
     "3.10": "*",
     "scrapy": "*",
     "python-scraper": "*",
-    "loguru": "*"
+    "loguru": "*",
+    "python-dotenv": "*",
+    "requirements.txt": "*",
+    "pandas": "*"
   }
 }
