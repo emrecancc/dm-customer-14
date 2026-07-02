@@ -1,14 +1,6 @@
-import requests
-from app.models import User
-
 class UserService:
-    def __init__(self, api_client):
-        self.api_client = api_client
+    def __init__(self, db):
+        self.db = db
 
-    def get_user(self, user_id):
-        response = self.api_client.get(f"/users/{user_id}")
-        if response.status_code == 200:
-            data = response.json()
-            return User(**data)
-        else:
-            return None
+    def get_user(self, user_id)
+        return self.db.query('SELECT * FROM users WHERE id = ?', user_id)
