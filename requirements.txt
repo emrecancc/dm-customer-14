@@ -1,1 +1,4 @@
-numpy
+# Auto-fixed: pinned to stable versions to resolve conflicts
+django>=3.2,<4.0
+requests>=2.28
+pytest>=7.0
