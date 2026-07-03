@@ -1,12 +1,12 @@
 {
   "name": "dm-customer-14",
   "version": "1.0.0",
-  "main": "app.js",
+  "description": "A simple Node.js project for the DM Customer 14 repository.",
+  "main": "src/index.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node src/index.js"
   },
-  "dependencies": {},
-  "devDependencies": {
-    "missing": "*"
-  }
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
 }
