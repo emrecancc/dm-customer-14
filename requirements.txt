@@ -1,1 +1,1 @@
-msgpack
+django>=4.2
