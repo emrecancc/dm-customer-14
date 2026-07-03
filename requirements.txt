@@ -1,1 +1,1 @@
-pillow
+django>=4.2
