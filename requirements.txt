@@ -1,1 +1,1 @@
-pillow
+tortoise_orm
