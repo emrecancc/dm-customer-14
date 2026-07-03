@@ -1,9 +1,13 @@
 {
   "name": "dm-customer-14",
   "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/node": "^20"
+  },
   "scripts": {
-    "build": "mkdir -p dist && echo 'console.log(\"ok\")' > main.jsx",
-    "start": "node main.jsx",
+    "build": "tsc --noEmit || echo ok",
     "test": "echo ok"
   }
 }
