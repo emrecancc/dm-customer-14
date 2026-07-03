@@ -1,1 +1,1 @@
-scrapy
+pydantic[email]
