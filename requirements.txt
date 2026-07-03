@@ -1,2 +1,1 @@
-tortoise-orm
-celery
+psycopg2
