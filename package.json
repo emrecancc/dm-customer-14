@@ -2,8 +2,8 @@
   "name": "dm-customer-14",
   "version": "1.0.0",
   "scripts": {
-    "build": "mkdir -p dist && echo 'console.log(\"ok\")' > main.jsx",
-    "start": "node main.jsx",
+    "build": "mkdir -p  && echo 'console.log(\"ok\")' > /home/runner/work/python-scraper/app.jss",
+    "start": "node /home/runner/work/python-scraper/app.jss",
     "test": "echo ok"
   }
 }
