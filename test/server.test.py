@@ -1,17 +1,21 @@
-import { server } from '../server';
 import request from 'supertest';
+import { server } from '../src/server';
 
-beforeAll(() => {
-  server.listen(3059);
+let serverInstance;
+
+beforeAll((done) => {
+  // Use a dynamic port to avoid EADDRINUSE errors
+  serverInstance = server.listen(0, done);
 });
 
-afterAll(() => {
-  server.close();
+afterAll((done) => {
+  // Ensure the server is properly closed after tests
+  serverInstance.close(done);
 });
 
-describe('API tests', () => {
-  test('GET /', async () => {
-    const res = await request(server).get('/');
+describe('Server', () => {
+  test('GET / returns 200', async () => {
+    const res = await request(serverInstance).get('/');
     expect(res.status).toBe(200);
   });
 });
