@@ -1,2 +1,2 @@
-motor
-sqlalchemy
+httpretty
+pillow
