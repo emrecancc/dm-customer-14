@@ -2,8 +2,10 @@
   "name": "dm-customer-14",
   "version": "1.0.0",
   "scripts": {
-    "build": "mkdir -p dist && echo '// placeholder' > dist/index.js",
-    "start": "node dist/index.js",
-    "test": "echo 'ok'"
-  }
+    "test": "echo 'ok'",
+    "build": "echo 'build ok'",
+    "start": "node index.js"
+  },
+  "dependencies": {},
+  "devDependencies": {}
 }
