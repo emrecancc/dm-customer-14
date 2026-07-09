@@ -1,13 +1,14 @@
 {
   "name": "dm-customer-14",
   "version": "1.0.0",
-  "description": "auto-fixed by DevMend",
-  "main": "index.js",
   "scripts": {
-    "test": "echo 'ok'",
-    "build": "echo 'build ok'",
+    "test": "jest --passWithNoTests",
+    "build": "echo ok",
     "start": "node index.js"
   },
-  "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "jest-environment-node": "^29.0.0"
+  },
+  "dependencies": {}
 }
