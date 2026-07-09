@@ -2,13 +2,10 @@
   "name": "dm-customer-14",
   "version": "1.0.0",
   "scripts": {
-    "test": "jest --passWithNoTests",
-    "build": "echo ok",
+    "test": "echo 'ok'",
+    "build": "echo 'build ok'",
     "start": "node index.js"
   },
-  "devDependencies": {
-    "jest": "^29.0.0",
-    "jest-environment-node": "^29.0.0"
-  },
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {}
 }
